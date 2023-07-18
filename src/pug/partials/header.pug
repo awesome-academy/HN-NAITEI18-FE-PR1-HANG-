@@ -1,0 +1,56 @@
+include ../base/variables/header
+include ./logo
+
+mixin header(activeMenu)
+    header.header
+        .header__top.bg-black.position-relative.z-2.d-none.d-lg-block
+            .text-taupe-gray.d-flex.display-12px.align-items-center.justify-content-between.container.h-100
+                .header__top-left.d-flex.align-items-center.gap-4
+                    time.header__time.d-flex.align-items-baseline
+                        i.fa-regular.fa-clock
+                        .header__time-text.d-flex
+                            span Open time: 8:00 - 18:00
+                            span Monday - Sunday
+                    .header__media-icons.d-flex.display-11px
+                        each mediaIcon, index in mediaIcons 
+                            .header__media-icon.d-flex.align-items-center.justify-content-center.border.border-1.border-top-0.border-bottom-0.border-taupe-gray(class=!index ? '' : 'border-start-0')
+                                i(class=mediaIcon)
+                .header__top-right.display-12px.d-flex.h-100
+                    each btn in headerBtns 
+                        a.header__top-btn.text-taupe-gray.text-decoration-none.d-flex.align-items-center.border.border-taupe-gray(href=btn.href class=btn.border)
+                            i(class=btn.icon)
+                            span= btn.content
+        .header__banner
+            .container.d-flex.h-100.justify-content-lg-between.justify-content-center
+                .header__deco.d-flex
+                    +logo
+                    .header__tree.header__tree--left.d-none.d-lg-block
+                        img(src="../assets/images/banner-tree-2.png" alt="Tree")
+                    .header__tree.header__tree--right.d-none.d-lg-block
+                        img(src="../assets/images/banner-tree-1.png" alt="Tree")
+                .header__contact-search.d-none.d-lg-flex.flex-column.align-items-center
+                    span.header__contact.text-pure-gray.d-flex
+                        i.fa-solid.fa-phone
+                        span.display-14px Hỗ trợ :  (04) 6674 2332 - (04) 3786 8904
+                    form(action="" method="method").header__form
+                        .input-group.h-100
+                            input(type="search", name="search", placeholder="Tìm kiếm...").form-control.header__input.rounded-pill.rounded-end-0.border-end-0
+                            span.input-group-text.bg-white.text-taupe-gray.form-control.header__icon.rounded-pill.rounded-start-0.border-start-0
+                                i.fa-solid.fa-magnifying-glass
+                .header__basket.text-raisin-black.d-lg-flex.align-items-end.d-none
+                    img(src="./assets/icons/basket-icon@4x.png", alt="basket icon").header__basket-icon
+                    span.display-12px.d-lg-none.d-xl-inline 0 sản phẩm
+        .header__menu.bg-shiny-shamrock
+            nav.container.h-100.d-flex.justify-content-between.justify-content-lg-start
+                a(href="#").header__menu-icon.text-white.h-100.align-items-center.d-flex.text-decoration-none
+                    i.fa-solid.fa-bars
+                each menuItem in menuItems
+                    a(href=menuItem.href, class=activeMenu == menuItem.content ? "bg-md-sea-green" : "").header__menu-item.text-white.text-decoration-none.h-100.d-lg-flex.align-items-center.d-none
+                        span= menuItem.content
+                        if menuItem.hasIcon 
+                            i.fa-solid.fa-caret-down
+                .header__res-icons.d-lg-none.text-white.h-100.align-items-center.d-flex
+                        .header__search.display-14px.d-flex
+                            i.fa-solid.fa-magnifying-glass
+                        .header__basket-icon.d-flex
+                            img.object-fill.w-100.h-100(src="./assets/icons/white-basket-icon.png", alt="basket icon")

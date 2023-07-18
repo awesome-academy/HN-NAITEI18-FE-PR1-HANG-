@@ -1,0 +1,52 @@
+include ../base/variables/footer
+include ../components/short-shop-info 
+
+mixin footer 
+    footer.footer.bg-dark-charcoal.text-philippine-silver
+        .footer__top.border.border-1.border-start-0.border-end-0.border-top-0.border-outer-space
+            .container
+                .row
+                    .footer__media-icons.d-flex.flex-column.justify-content-end.col-lg-4.col-12
+                        h3.text-uppercase.display-14px.mb-0.fw-bold Kênh thông tin từ chúng tôi
+                        .footer__media-icons-list.d-flex
+                            each mediaIcon in mediaIcons 
+                                .footer__media-icon.d-flex.align-items-center.justify-content-center
+                                    i(class=mediaIcon)
+                    .footer__form.col-lg-8.col-12
+                        form.form-group.display-14px.fw-bold.align-items-end.row(action="")
+                            label.text-uppercase.d-flex.flex-row.flex-lg-column.gap-1.col-lg-4.col-12(for="email") 
+                                span Đăng ký nhận 
+                                span email từ chúng tôi
+                            .footer__input.col-12.col-lg-8.d-flex
+                                input#email.form-control.rounded-0.border-0(type="email" name="email") 
+                                button.rounded-0.d-flex.align-items-center.justify-content-center.bg-md-sea-green.border-0.text-white(type="submit")
+                                    i.fa-solid.fa-paper-plane
+        .container
+            .row
+                +shortShopInfo('Green Shop được thành lập từ 8/2010 được sự tin tưởng của khách hàng trong suốt thời gian hoạt động đến nay cửa hàng ngày một phát triển').footer__short-shop-info.col.col-xl-4.col-12
+                .footer__links-list.d-flex.col-xl-8.col-12.justify-content-between.row
+                    each footerLinksItem, index in footerLinksItems 
+                        .footer__links-item.col.col-12.col-md-5(class=index ? "col-lg" : "col-lg-4")
+                            h3.footer__links-item-title.text-uppercase.fw-bold.display-14px.text-md-sea-green= footerLinksItem.title 
+                            ul.list-unstyled.mb-0
+                                each link in footerLinksItem.links
+                                    li
+                                        a.footer__links-item-link.display-12px.text-philippine-silver.text-decoration-none.d-flex.align-items-center(href=link.href)
+                                            i.fa-solid.fa-chevron-right.display-6px
+                                            span= link.content
+        .footer__bottom.border.border-1.border-start-0.border-end-0.border-bottom-0.border-outer-space.d-none.d-lg-block
+            .container.d-flex.justify-content-between.h-100.align-items-center
+                .row
+                    ul.footer__bottom__list.list-unstyled.mb-0.d-flex
+                        each bottomLink in bottomLinks
+                            li 
+                                a.footer__bottom__link.display-12px.text-white.text-decoration-none(href=bottomLink.href)= bottomLink.content
+                .row
+                    ul.footer__credits.text-white.d-flex.display-19px.mb-0
+                        each credit in credits 
+                            i(class=credit.icon)
+        .footer__designer.bg-grullo.d-flex.justify-content-center.align-items-center.text-white
+            span.display-14px 
+                span Thiết kế  bởi Bizweb 
+                i.fa-solid.fa-copyright
+

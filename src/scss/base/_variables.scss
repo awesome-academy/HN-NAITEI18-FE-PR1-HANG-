@@ -1,0 +1,58 @@
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../assets/fonts/Roboto-Light.ttf);
+    font-weight: $font-weight-light;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../assets/fonts/Roboto-Regular.ttf);
+    font-weight: $font-weight-regular;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../assets/fonts/Roboto-Medium.ttf);
+    font-weight: $font-weight-medium;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../assets/fonts/Roboto-Bold.ttf);
+    font-weight: $font-weight-bold;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url(../assets/fonts/RobotoSlab-Regular.ttf);
+    font-weight: $font-weight-regular;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url(../assets/fonts/RobotoSlab-Bold.ttf);
+    font-weight: $font-weight-bold;
+}
+
+$primary-font-family: 'Arial';
+$font-family-roboto: 'Roboto', sans-serif;
+$font-family-robotoslab: 'Roboto Slab', sans-serif;
+
+$fa-font-path: "../assets/fonts/webfonts";
+
+$taupe-gray-color: #898989;
+$bright-gray-color: #ebebeb;
+$shiny-shamrock-color: #59B586;
+$pure-gray-color: #7D7D7D;
+$raisin-black-color: #202020;
+$md-sea-green-color: #36a66c;
+$green-sheen-color: #68BA8F;
+$dark-charcoal-color: #313131;
+$philippine-silver-color: #b7b7b7;
+$outer-space-color: #494949;
+$grullo-color: #434343;

@@ -1,0 +1,20 @@
+.short-shop-info {
+    .short-shop-info__text {
+        width: 326px;
+        line-height: 23px;
+        margin-bottom: 20px;
+
+        @include media-breakpoint-down(xl) {
+            width: 100%;
+            margin-bottom: 57px;
+        }
+    }
+
+    .short-shop-info__contact {
+        line-height: 23px;
+
+        i {
+            margin-right: 10px;
+        }
+    }
+}

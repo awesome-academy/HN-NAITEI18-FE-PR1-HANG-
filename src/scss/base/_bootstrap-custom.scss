@@ -1,0 +1,35 @@
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+
+$custom-colors: (
+    taupe-gray: $taupe-gray-color,
+    shiny-shamrock: $shiny-shamrock-color,
+    pure-gray: $pure-gray-color,
+    raisin-black: $raisin-black-color,
+    md-sea-green: $md-sea-green-color,
+    green-sheen: $green-sheen-color,
+    dark-charcoal: $dark-charcoal-color,
+    philippine-silver: $philippine-silver-color,
+    outer-space: $outer-space-color,
+    grullo: $grullo-color,
+);
+
+$theme-colors: map-merge($map1: $theme-colors, $map2: $custom-colors);
+
+$custom-font-sizes: (
+    6px: 6px,
+    10px: 10px,
+    11px: 11px,
+    12px: 12px,
+    14px: 14px,
+    15px: 15px,
+    18px: 18px,
+    19px: 19px,
+    20px: 20px,
+    54px: 54px,
+    70px: 70px,
+);
+
+$display-font-sizes: map-merge($map1: $display-font-sizes, $map2: $custom-font-sizes);
+
+$container-max-widths: map-remove($container-max-widths, "xxl")
