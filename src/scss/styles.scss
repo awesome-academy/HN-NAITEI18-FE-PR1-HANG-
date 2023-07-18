@@ -1,0 +1,19 @@
+@import "./base/reset";
+@import "./base/variables";
+@import "./base/global";
+@import "./base/bootstrap-custom";
+
+@import "../../node_modules/bootstrap/scss/mixins";
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/brands.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+@import "../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
+
+@import "./components/breadcrumb";
+@import "./components/short-shop-info";
+
+@import "./layouts/logo";
+@import "./layouts/header";
+@import "./layouts/footer";

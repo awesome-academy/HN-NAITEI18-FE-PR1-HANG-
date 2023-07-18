@@ -1,0 +1,106 @@
+.footer {
+    .footer__media-icons {
+        gap: 10px;
+        padding-bottom: 33px;
+
+        @include media-breakpoint-down(lg) {
+            gap: 19px;
+            padding-top: 35px;
+            padding-bottom: 0;
+        }
+
+        h3 {
+            @include media-breakpoint-down(lg) {
+                color: $md-sea-green-color;
+            }
+        }
+
+        .footer__media-icons-list {
+            gap: 25px;
+        }
+    }
+
+    .footer__form {
+        padding-top: 33px;
+        padding-bottom: 33px;
+
+        @include media-breakpoint-down(lg) {
+            padding-top: 35px;
+            padding-bottom: 38px;
+        }
+
+        label {
+            @include media-breakpoint-down(lg) {
+                color: $md-sea-green-color;
+                margin-bottom: 15px;
+            }
+        }
+
+        .footer__input {
+            height: 46px;
+            max-width: 487px;
+
+            @include media-breakpoint-down(lg) {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            button {
+                width: 49px;
+            }
+        }
+    }
+
+    .footer__links-list {
+        padding-top: 64px;
+
+        @include media-breakpoint-down(xl) {
+            padding-top: 0;
+        }
+
+        @include media-breakpoint-down(lg) {
+            gap: 62px;
+            margin-bottom: 44px;
+        }
+
+        .footer__links-item {
+            &:last-child {
+                max-width: fit-content;
+                
+                @include media-breakpoint-down(lg) {
+                    max-width: inherit;
+                }
+            }
+
+            .footer__links-item-title {
+                margin-bottom: 21px;
+            }
+        
+            .footer__links-item-link {
+                gap: 2px;
+                line-height: 37px !important;
+            }
+        }
+    }
+
+    .footer__short-shop-info {
+        padding-top: 19px;
+        margin-bottom: 57px;
+    }
+
+    .footer__bottom {
+        height: 66px;
+
+        .footer__bottom__list {
+            gap: 22px;
+        }
+
+        .footer__credits {
+            gap: 13px;
+        }
+    }
+
+    .footer__designer {
+        height: 46px;
+    }
+}

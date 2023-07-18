@@ -1,0 +1,10 @@
+mixin breadcrumb(breadcrumbItems) 
+    nav(aria-label='breadcrumb').container
+        if breadcrumbItems
+            ol.breadcrumb.breadcrumb--custom.display-12px
+                each breadcrumbItem in breadcrumbItems 
+                    if breadcrumbItem.href 
+                        li.breadcrumb-item
+                            a.text-taupe-gray.text-decoration-none(href=breadcrumbItem.href)= breadcrumbItem.content
+                    else
+                        li.breadcrumb-item.active.text-green-sheen(aria-current='page')= breadcrumbItem.content

@@ -1,6 +1,7 @@
 const { src, dest, parallel, watch, series } = require("gulp");
 const concat = require("gulp-concat");
 const sass = require("gulp-sass")(require("sass"));
+const autoprefixer = require("gulp-autoprefixer");
 const browserSync = require("browser-sync").create();
 const pug = require("gulp-pug");
 
@@ -15,6 +16,9 @@ const { sassFiles, jsFiles, htmlFiles } = FilePath;
 function sassTask() {
   return src(sassFiles)
     .pipe(sass())
+    .pipe(
+      autoprefixer(),
+    )
     .pipe(dest("dist/css"))
     .pipe(browserSync.stream());
 }
@@ -27,7 +31,10 @@ function htmlTask() {
 }
 
 function jsTask() {
-  return src(jsFiles).pipe(concat("all.js")).pipe(dest("dist/js"));
+  return src(jsFiles)
+    .pipe(src("node_modules/bootstrap/dist/js/bootstrap.min.js"))
+    .pipe(concat("all.js"))
+    .pipe(dest("dist/js"));
 }
 
 function assetsTask() {
@@ -35,7 +42,7 @@ function assetsTask() {
 }
 
 function serve() {
-  browserSync.init({ server: { baseDir: "./dist" } });
+  browserSync.init({ server: { baseDir: "./dist", index: "index.html" } });
   watch("./src/scss/**/*.scss", sassTask);
   watch("./src/js/**/*.js", jsTask);
   watch("./src/pug/**/*.pug", htmlTask);

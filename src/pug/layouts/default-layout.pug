@@ -1,0 +1,19 @@
+include ../partials/header
+include ../partials/footer
+include ../components/breadcrumb
+
+doctype html
+html(lang="en")
+    head
+        block includes
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Green Shop - #{title}
+        link(rel="stylesheet" href="./css/styles.css")
+    body 
+        +header(activeMenu)
+        main 
+            +breadcrumb(breadcrumbItems)
+            block content 
+        +footer
+        script(src="./js/all.js") 
