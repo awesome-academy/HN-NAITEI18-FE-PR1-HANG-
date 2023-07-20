@@ -1,4 +1,18 @@
 extends ../layouts/default-layout
 
-block includes 
-    include ../base/variables/index
+include ../partials/banner
+include ../partials/banner-middle
+include ../partials/featured-products
+include ../partials/best-seller-products
+include ../partials/promotional-products
+
+block content 
+    +banner
+    +featuredProducts
+    .container 
+        .row 
+            .col.col-12.col-lg-3
+                +bestSellerProducts
+            .col.col-12.col-lg-9
+                +promotionalProducts
+    +bannerMiddle

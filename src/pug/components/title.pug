@@ -1,0 +1,12 @@
+mixin title(content, carouselId)
+    .title
+        .d-flex.justify-content-between.align-items-center
+            h2.title__content.d-inline-block.display-16px.text-shiny-shamrock.mb-0.pb-3.border.border-2.border-top-0.border-start-0.border-end-0.border-shiny-shamrock.fw-bold= content
+            if carouselId 
+                .title__carousel-btns.d-flex 
+                    button.title__carousel-btn.text-taupe-gray.bg-transparent.rounded-circle.border.border-1.border-taupe-gray(type="button", data-bs-target="#" + carouselId, data-bs-slide="prev")
+                        i.fa-solid.fa-angle-left 
+                        span.visually-hidden Previous
+                    button.title__carousel-btn.text-taupe-gray.bg-transparent.rounded-circle.border.border-1.border-taupe-gray(type="button", data-bs-target="#" + carouselId, data-bs-slide="next")
+                        i.fa-solid.fa-angle-right
+                        span.visually-hidden Next

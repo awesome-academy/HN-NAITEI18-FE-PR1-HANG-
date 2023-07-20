@@ -1,0 +1,17 @@
+mixin promotionalProducts 
+    .promotional-products
+        .promotional-products__title
+            +title('Sản phẩm khuyến mãi', 'promotional-products-carousel')
+        #promotional-products-carousel.carousel.slide 
+            .carousel-inner.d-none.d-lg-block
+                .carousel-item.active
+                    .promotional-products__list.row
+                        each promotionalProduct in promotionalProducts 
+                            .col.col-4.col
+                                +productCard(promotionalProduct.img, promotionalProduct.title, promotionalProduct.price, promotionalProduct.tag)
+            .carousel-inner.d-block.d-lg-none 
+                each promotionalProduct, index in promotionalProducts 
+                    .carousel-item(class=index != 0 ? "" : "active")
+                        .promotional-products__list.row 
+                            .col.col-12
+                                +productCard(promotionalProduct.img, promotionalProduct.title, promotionalProduct.price, promotionalProduct.tag)

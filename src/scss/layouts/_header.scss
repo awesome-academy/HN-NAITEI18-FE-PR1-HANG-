@@ -1,5 +1,5 @@
 .header {
-    .header__top {
+    &__top {
         height: 2rem;
 
         .header__top-left {
@@ -28,7 +28,7 @@
         }
     }
 
-    .header__banner {
+    &__banner {
         height: 9rem;
         background-image: url(../assets/images/header-banner-bg.png);
 
@@ -124,7 +124,7 @@
         }
     }
 
-    .header__menu {
+    &__menu {
         height: 50px;
 
         @include media-breakpoint-down(lg) {

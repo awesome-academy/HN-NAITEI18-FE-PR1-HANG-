@@ -1,0 +1,78 @@
+.banner-middle {
+    background-image: url(../../assets/images/banner-middle.png);
+    font-family: $font-family-robotoslab;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    height: 218px;
+    background-position: -100px -912px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 1240px 1347px;
+
+    @include media-breakpoint-down(xl) {
+        background-position: -260px -910px;
+    }
+
+    @include media-breakpoint-down(lg) {
+        background-position: -420px -950px;
+        height: 180px;
+    }
+
+    @include media-breakpoint-down(md) {
+        background-position-x: -750px;
+    }
+
+    @include media-breakpoint-down(sm) {
+        height: 56px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        background-position: 0 -368px;
+        background-size: cover;
+    }
+
+    &__content {
+        padding-top: 29px;
+        padding-bottom: 16px;
+        padding-left: 69px;
+        padding-right: 69px;
+        top: 18px;
+        right: 32px;
+
+        @include media-breakpoint-down(lg) {
+            padding-left: 32px;
+            padding-right: 32px;
+            padding-top: 12px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            padding-left: 17px;
+            padding-right: 17px;
+            padding-top: 7px;
+            padding-bottom: 0;
+            top: 4px;
+            right: 8px;
+        }
+
+        span {
+            &:first-child {
+                @include media-breakpoint-down(lg) {
+                    font-size: 32;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 12px;
+                }
+            }
+
+            &:last-child {
+                @include media-breakpoint-down(lg) {
+                    font-size: 52px;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}

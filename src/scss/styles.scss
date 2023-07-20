@@ -11,8 +11,17 @@
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
 @import "../../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
 
+
 @import "./components/breadcrumb";
 @import "./components/short-shop-info";
+@import "./components/title";
+@import "./components/product-card";
+
+@import "./partials/banner";
+@import "./partials/banner-middle";
+@import "./partials/featured-products";
+@import "./partials/best-seller-products";
+@import "./partials/promotional-products";
 
 @import "./layouts/logo";
 @import "./layouts/header";

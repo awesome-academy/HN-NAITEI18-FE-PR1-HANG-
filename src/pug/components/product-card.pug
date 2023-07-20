@@ -1,0 +1,28 @@
+include ./stars-rating
+
+mixin productCard(img, title, price, tag, isBig = false, hasActions = false)
+    .card.rounded-0.product-card&attributes(attributes)
+        if tag 
+            .product-card__tag.z-3.rounded-circle.d-flex.align-items-center.justify-content-center.text-uppercase.display-14px.text-white.position-absolute(class=(isBig ? "product-card__tag--big" : "product-card__tag--small") + (" bg-" + tag.color))
+                span= tag.content
+        .product-card__top.position-relative
+            img.card-img-top.rounded-0(src="./assets/images/" + img.name, alt=img.alt)
+            if img.hasHover 
+                .product-card__actions.d-flex.position-absolute
+                    a.btn.btn-primary.d-flex.align-items-center.justify-content-center.rounded-pill.bg-green-sheen.display-13px.text-uppercase(href="#") Mua ngay
+                    a.btn.btn-primary.btn-white.rounded-circle.d-flex.align-items-center.bg-white.text-black.border-0.display-12px.justify-content-center(href="#") 
+                        i.fa-solid.fa-magnifying-glass
+        .product-card__body.card-body.text-center
+            h5.product-card__title.card-title.text-davy-grey.display-16px.mb-0= title
+            .product-card__stars.display-14px
+                +starsRating
+            .product-card__price.card-text.display-18px.text-pure-red= price.now 
+            if price.pre 
+                .product-card__price.product-card__price--pre.card-text.display-14px.text-decoration-line-through.text-spanish-gray= price.pre
+            if hasAction 
+                .product-card__actions.d-flex
+                    a.btn.btn-primary.d-flex.align-items-center.justify-content-center.rounded-pill.bg-green-sheen.display-13px.text-uppercase(href="#") Mua ngay
+                    a.btn.btn-primary.btn-white.rounded-circle.d-flex.align-items-center.bg-white.text-black.border-0.display-12px.justify-content-center(href="#") 
+                        i.fa-solid.fa-magnifying-glass
+                    a.btn.btn-primary.btn-white.rounded-circle.d-flex.align-items-center.bg-white.text-black.border-0.display-12px.justify-content-center(href="#") 
+                        i.fa-solid.fa-heart

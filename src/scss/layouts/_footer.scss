@@ -1,5 +1,5 @@
 .footer {
-    .footer__media-icons {
+    &__media-icons {
         gap: 10px;
         padding-bottom: 33px;
 
@@ -20,7 +20,7 @@
         }
     }
 
-    .footer__form {
+    &__form {
         padding-top: 33px;
         padding-bottom: 33px;
 
@@ -51,7 +51,7 @@
         }
     }
 
-    .footer__links-list {
+    &__links-list {
         padding-top: 64px;
 
         @include media-breakpoint-down(xl) {
@@ -83,12 +83,12 @@
         }
     }
 
-    .footer__short-shop-info {
+    &__short-shop-info {
         padding-top: 19px;
         margin-bottom: 57px;
     }
 
-    .footer__bottom {
+    &__bottom {
         height: 66px;
 
         .footer__bottom__list {
@@ -100,7 +100,7 @@
         }
     }
 
-    .footer__designer {
+    &__designer {
         height: 46px;
     }
 }

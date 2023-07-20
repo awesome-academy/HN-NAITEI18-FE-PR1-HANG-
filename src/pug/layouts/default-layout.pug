@@ -1,11 +1,22 @@
 include ../partials/header
 include ../partials/footer
 include ../components/breadcrumb
+include ../components/product-card
+include ../components/short-shop-info 
+include ../components/stars-rating 
+include ../components/title
+include ../base/variables/header
+include ../base/variables/footer
+include ../base/variables/banner
+include ../base/variables/best-seller-products
+include ../base/variables/featured-products
+include ../base/variables/promotional-products
+include ../base/variables/index
+include ../base/variables/products-list
 
 doctype html
 html(lang="en")
     head
-        block includes
         meta(charset="UTF-8")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
         title Green Shop - #{title}
@@ -13,7 +24,6 @@ html(lang="en")
     body 
         +header(activeMenu)
         main 
-            +breadcrumb(breadcrumbItems)
             block content 
         +footer
         script(src="./js/all.js") 

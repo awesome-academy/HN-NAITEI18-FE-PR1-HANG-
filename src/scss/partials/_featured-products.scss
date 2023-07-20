@@ -1,0 +1,79 @@
+.featured-products {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include media-breakpoint-down(lg) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    &__title {
+        padding-bottom: 37px;
+
+        @include media-breakpoint-down(lg) {
+            padding-bottom: 28px;
+        }
+    }
+
+    &__list {
+        @include media-breakpoint-down(lg) {
+            gap: 12px;
+        }
+
+        .featured-products__col {
+            gap: 30px;
+
+            @include media-breakpoint-down(lg) {
+                gap: 12px;
+            }
+
+            .featured-products__row {
+                .col {
+                    &:first-child {
+                        @include media-breakpoint-down(lg) {
+                            padding-right: 6px !important;
+                        }
+
+                    }
+
+                    &:last-child {
+                        @include media-breakpoint-down(lg) {
+                            padding-left: 6px !important;
+                        }
+                    }
+
+                    .product-card {
+                        &__tag {
+                            &--small {
+                                @include media-breakpoint-down(lg) {
+                                    display: none !important;
+                                }
+                            }
+                        }
+
+                        &__title {
+                            @include media-breakpoint-down(lg) {
+                                font-size: 11px;
+                            }
+                        }
+
+                        &__stars {
+                            padding-top: 7px;
+                            padding-bottom: 9px;
+                        }
+
+                        &__price {
+                            @include media-breakpoint-down(lg) {
+                                font-size: 12px !important;
+
+                                &--pre {
+                                    font-size: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
