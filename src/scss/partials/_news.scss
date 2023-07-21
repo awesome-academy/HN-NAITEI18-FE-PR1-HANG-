@@ -1,0 +1,19 @@
+.news {
+    padding-bottom: 74px;
+
+    @include media-breakpoint-down(md) {
+        padding-bottom: 60px;
+    }
+
+    &__title {
+        padding-bottom: 37px;
+    }
+
+    &__list {
+        .news__item {
+            @include media-breakpoint-down(md) {
+                padding-bottom: 12px;
+            }
+        }
+    }
+}

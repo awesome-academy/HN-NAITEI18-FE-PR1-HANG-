@@ -5,6 +5,11 @@ include ../partials/banner-middle
 include ../partials/featured-products
 include ../partials/best-seller-products
 include ../partials/promotional-products
+include ../partials/new-products
+include ../partials/news
+
+block header 
+    +header('Trang chủ')
 
 block content 
     +banner
@@ -16,3 +21,5 @@ block content
             .col.col-12.col-lg-9
                 +promotionalProducts
     +bannerMiddle
+    +newProducts
+    +news

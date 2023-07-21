@@ -1,0 +1,17 @@
+mixin newProducts 
+    .container
+        .new-products 
+            .new-products__title 
+                +title('Sản phẩm mới', 'new-products-carousel')
+            .new-products__list 
+                #new-products-carousel.new-products__carousel.carousel.slide
+                    .carousel-inner.d-none.d-lg-block
+                        .carousel-item.active
+                            .row 
+                                each newProduct in newProducts 
+                                    .col-3 
+                                        +productCard(newProduct.img, newProduct.title, newProduct.price, newProduct.tag)
+                    .carousel-inner.d-block.d-lg-none 
+                        each newProduct, index in newProducts 
+                            .carousel-item(class=index != 0 ? "" : "active")
+                                +productCard(newProduct.img, newProduct.title, newProduct.price, newProduct.tag)
