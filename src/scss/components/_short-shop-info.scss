@@ -1,5 +1,5 @@
 .short-shop-info {
-    .short-shop-info__text {
+    &__text {
         width: 326px;
         line-height: 23px;
         margin-bottom: 20px;
@@ -10,7 +10,7 @@
         }
     }
 
-    .short-shop-info__contact {
+    &__contact {
         line-height: 23px;
 
         i {

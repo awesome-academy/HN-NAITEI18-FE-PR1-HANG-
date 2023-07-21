@@ -1,0 +1,16 @@
+mixin banner 
+    #banner-carousel.banner.carousel.slide
+        .carousel-indicators.banner__indicators
+            button.banner__indicator(type="button" data-bs-target="#banner-carousel" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1")
+            button.banner__indicator.active(type="button" data-bs-target="#banner-carousel" data-bs-slide-to="1" aria-label="Slide 1")
+            button.banner__indicator(type="button" data-bs-target="#banner-carousel" data-bs-slide-to="2" aria-label="Slide 1")
+        .carousel-inner
+            each bannerSlide, index in smallBannerSlides 
+                .carousel-item(class=index == 1 ? "active" : "")
+                    img.banner__img.img-fluid(src="./assets/images/" + bannerSlide, alt="Banner")
+            
+            .banner__content.text-white.position-absolute.text-center.display-20px.d-none.d-sm-block.w-100
+                span.display-66px.text-uppercase.d-block.fw-bold Green Shop 
+                span.display-104px.text-uppercase.d-block.lh-1 Cho thuê cây cảnh Tết 2016
+                span.display-18px.d-block
+                    em &lpar; Miễn phí vận chuyện với những đơn hàng có trị giá trên 5.000.000 đ &rpar;

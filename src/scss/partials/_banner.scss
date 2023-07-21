@@ -1,0 +1,53 @@
+.banner {
+    &__indicators {
+        gap: 9px;
+        margin-bottom: 33px;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 12px;
+        }
+
+        .banner__indicator {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            margin: 0;
+
+            @include media-breakpoint-down(sm) {
+                width: 12px;
+                height: 12px;
+            }
+        }
+    }
+
+    &__img {
+        height: 590px;
+        object-fit: cover;
+
+        @include media-breakpoint-down(sm) {
+            height: 225px;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        top: 130px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        span {
+            &:first-child {
+                font-family: $font-family-robotoslab;
+            }
+
+            &:nth-child(2) {
+                font-family: $font-family-gulyesa;
+                margin-top: 28px;
+            }
+
+            &:last-child {
+                margin-top: -6px;
+            }
+        }
+    }
+}

@@ -12,6 +12,12 @@ $custom-colors: (
     philippine-silver: $philippine-silver-color,
     outer-space: $outer-space-color,
     grullo: $grullo-color,
+    chinese-white: $chinese-white-color,
+    amber: $amber-color,
+    davy-grey: $davy-grey-color,
+    pure-red: $pure-red-color,
+    spanish-gray: $spanish-gray-color,
+    jasper: $jasper-color,
 );
 
 $theme-colors: map-merge($map1: $theme-colors, $map2: $custom-colors);
@@ -21,15 +27,25 @@ $custom-font-sizes: (
     10px: 10px,
     11px: 11px,
     12px: 12px,
+    13px: 13px,
     14px: 14px,
     15px: 15px,
+    16px: 16px,
     18px: 18px,
     19px: 19px,
     20px: 20px,
+    46px: 46px,
     54px: 54px,
+    66px: 66px,
+    67px: 67px,
     70px: 70px,
+    104px: 104px,
 );
 
 $display-font-sizes: map-merge($map1: $display-font-sizes, $map2: $custom-font-sizes);
 
-$container-max-widths: map-remove($container-max-widths, "xxl")
+$container-max-widths: map-remove($container-max-widths, "xxl");
+
+$grid-gutter-width: 30px;
+
+$container-padding-x: 30px;

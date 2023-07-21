@@ -1,0 +1,23 @@
+mixin featuredProducts 
+    .featured-products.container
+        .featured-products__title 
+            +title('Sản phẩm nổi bật')
+        .featured-products__list.row
+            .col.col-12.col-lg-6.featured-products__col.d-flex.flex-column
+                .row 
+                    .col.col-12 
+                        +productCard(featuredProducts[0].img, featuredProducts[0].title, featuredProducts[0].price, featuredProducts[0].tag, true)
+                .row.featured-products__row
+                    .col.col-6
+                        +productCard(featuredProducts[1].img, featuredProducts[1].title, featuredProducts[1].price, featuredProducts[1].tag)
+                    .col.col-6 
+                        +productCard(featuredProducts[2].img, featuredProducts[2].title, featuredProducts[2].price, featuredProducts[2].tag)
+            .col.col-12.col-lg-6.featured-products__col.d-flex.flex-column
+                .row.featured-products__row
+                    .col.col-6
+                        +productCard(featuredProducts[3].img, featuredProducts[3].title, featuredProducts[3].price, featuredProducts[3].tag)
+                    .col.col-6 
+                        +productCard(featuredProducts[4].img, featuredProducts[4].title, featuredProducts[4].price, featuredProducts[4].tag)
+                .row 
+                    .col.col-12 
+                        +productCard(featuredProducts[5].img, featuredProducts[5].title, featuredProducts[5].price, featuredProducts[5].tag, true)

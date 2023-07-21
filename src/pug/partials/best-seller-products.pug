@@ -1,0 +1,7 @@
+mixin bestSellerProducts 
+    .best-seller-products.d-flex.flex-column
+        .best-seller-products__title
+            +title('Sản phẩm bán chạy')
+        .best-seller-products__list.d-grid
+            each bestSellerProduct, index in bestSellerProducts 
+                +productCard(bestSellerProduct.img, bestSellerProduct.title, bestSellerProduct.price).best-seller-products__card.flex-row.align-items-center(class=index ? "border-top-0" : "")
