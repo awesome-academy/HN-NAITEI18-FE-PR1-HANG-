@@ -1,0 +1,10 @@
+mixin news
+    .container 
+        .news 
+            .news__title
+                +title('Tin tức')
+            .news__list
+                .row 
+                    each newsItem in news 
+                        .news__item.col-12.col-md-4
+                            +newsCard(newsItem.thumbnail, newsItem.time, newsItem.title, newsItem.content)

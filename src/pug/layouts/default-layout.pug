@@ -5,6 +5,7 @@ include ../components/product-card
 include ../components/short-shop-info 
 include ../components/stars-rating 
 include ../components/title
+include ../components/news-card
 include ../base/variables/header
 include ../base/variables/footer
 include ../base/variables/banner
@@ -13,6 +14,8 @@ include ../base/variables/featured-products
 include ../base/variables/promotional-products
 include ../base/variables/index
 include ../base/variables/products-list
+include ../base/variables/new-products
+include ../base/variables/news
 
 doctype html
 html(lang="en")
@@ -22,7 +25,7 @@ html(lang="en")
         title Green Shop - #{title}
         link(rel="stylesheet" href="./css/styles.css")
     body 
-        +header(activeMenu)
+        block header
         main 
             block content 
         +footer

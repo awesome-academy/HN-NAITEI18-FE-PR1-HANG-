@@ -1,0 +1,19 @@
+.news-card {
+    &__img {
+        height: 203px;
+    }
+
+    &__body {
+        padding-top: 23px !important;
+
+        .card-title {
+            font-family: $font-family-roboto;
+            margin-bottom: 12px;
+        }
+
+        .card-text {
+            font-family: $font-family-roboto;
+            margin-bottom: 20px;
+        }
+    }
+}

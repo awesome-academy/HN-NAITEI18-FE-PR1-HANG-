@@ -1,0 +1,10 @@
+mixin newsCard(thumbnail, time, title, content)
+    .news-card.card.border-0.rounded-0
+        img.news-card__img.card-img-top.object-fit-cover.rounded-0(src="./assets/images/" + thumbnail, alt=title)
+        .news-card__body.card-body.p-0.display-12px
+            time
+                em.card-text.text-spanish-gray.d-block= time
+            h5.card-title.display-14px.text-shiny-shamrock.fw-bold= title 
+            p.card-text.text-taupe-gray= content
+            a.text-shiny-shamrock.text-decoration-none(href="#") 
+                em Đọc tiếp 
