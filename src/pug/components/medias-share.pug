@@ -1,0 +1,12 @@
+mixin mediasShare 
+    .medias-share.d-flex.align-items-center
+        each shareMedia in shareMedias
+            .medias-share__item.d-flex.align-items-center
+                .medias-share__text.d-flex.lh-1.align-items-end(class=shareMedia.textClass)
+                    .medias-share__icon(class=shareMedia.iconClass)
+                        i(class=shareMedia.icon)
+                    if shareMedia.textContent
+                        span(class=shareMedia.textContentClass ? shareMedia.textContentClass : 'text-white')= shareMedia.textContent
+                .medias-share__number.position-relative
+                    .display-8px.lh-1.border.border-1.border-manatee
+                        span= shareMedia.number

@@ -18,6 +18,14 @@ $custom-colors: (
     pure-red: $pure-red-color,
     spanish-gray: $spanish-gray-color,
     jasper: $jasper-color,
+    bright-gray: $bright-gray-color,
+    anti-flash-white: $anti-flash-white-color,
+    cinnabar: $cinnabar-color,
+    han-blue: $han-blue-color,
+    blue-yonder: $blue-yonder-color,
+    manatee: $manatee-color,
+    electric-blue: $electric-blue-color,
+    light-gray: $light-gray-color,
     android-green: $android-green-color,
     chinese-orange: $chinese-orange-color,
     dark-orchid: $dark-orchid-color,
@@ -33,6 +41,7 @@ $theme-colors: map-merge($map1: $theme-colors, $map2: $custom-colors);
 
 $custom-font-sizes: (
     6px: 6px,
+    8px: 8px,
     10px: 10px,
     11px: 11px,
     12px: 12px,
@@ -59,4 +68,7 @@ $grid-gutter-width: 30px;
 
 $container-padding-x: 30px;
 
+$nav-tabs-border-width: 2px;
+
+$nav-link-padding-x: 84px;
 $form-select-indicator: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" fill="#{$form-select-indicator-color}"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>')

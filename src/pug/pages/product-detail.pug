@@ -1,0 +1,47 @@
+extends ../layouts/default-layout 
+
+include ../partials/same-products
+
+block header 
+    +header('Sản phẩm')
+
+block content 
+    +breadcrumb(productDetailBreadcrumbItems)
+    .product.container 
+        .product__info.d-flex.flex-column.flex-md-row
+            .product__images.d-flex.flex-wrap.justify-content-between
+                each productImage, index in productImages 
+                    .product__image(class=index ? "": "product__image--main") 
+                        img.img-fluid.object-fit-cover.h-100(src="./assets/images/" + productImage, alt="Cây Dạ Lam")
+            .product__text 
+                h1.product__title.display-18px Cây Dạ Lam
+                +starsRating.display-11px.lh-1
+                .product__price.d-flex.align-items-end
+                    span.display-18px.text-pure-red 4.099.000 đ
+                    span.display-14px.text-spanish-gray.text-decoration-line-through 4.099.000 đ
+                p.product__description.text-pure-gray.border.border-start-0.border-end-0.border-chinese-white.display-12px.mb-0 Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt.
+                form.product__form.d-flex.border.border-start-0.border-end-0.border-top-0.border-chinese-white(action="") 
+                    label.col-form-label(for="amount") Số lượng 
+                    .product__amount-input.d-flex 
+                        button.btn.btn-outline-bright-gray.rounded-0.text-black +
+                        input.form-control.rounded-0.border-bright-gray.text-center(type="number", name="amount", value="1", min="1")
+                        button.btn.btn-outline-bright-gray.rounded-0.text-black -
+                +productActions.product__actions
+                +mediasShare
+        .product__tabs 
+            ul.nav.nav-tabs.text-uppercase.display-14px
+                each productTab, index in productTabs 
+                    li.nav-item 
+                        a.nav-link.text-black.rounded-0(href=productTab.href, class=index ? '' : 'active')= productTab.title
+            .product__panel.border.border-2.border-top-0.border-anti-flash-white.text-pure-gray.display-12px 
+                p Tên phổ thông: Dạ lam, Huỳnh tinh cảnh, Dong vằn.
+                p Tên khoa học: Calathea zebrina
+                p Họ thực vật: Marantaceae (Củ dong).
+                p Chiều cao: 0,8-1,2m
+                p Cây dạ lam có nguồn gốc từ Brazil, được du nhập và phân bố rộng khắp ở Việt Nam.
+                p Cây mọc thành bụi thưa, thân vươn thẳng với chiều cao cây trung bình từ 0,8-1,2m. Lá hình trứng, mép lá nguyên, gân lá nổi rõ, phiến rộng khoảng từ 15-20cm. Lá có màu xanh đậm ở mặt trên, quanh gân lá có màu trắng sữa; mặt dưới lá nhạt màu hơn. Lá cây dạ lam mọc cách, cuống lá dài khi rụng để lại các khía màu nâu nhạt.
+                p Cây dạ lam thuộc loại cây chịu bóng bán phần hoặc hoàn toàn, nhu cầu nước tương đối cao. Cây được nhân giống từ tách bụi, cây mọc khỏe, tốc độ sinh trưởng nhanh với sức sống mạnh.
+                p Đây là loại cây có dáng đẹp, màu lá mướt mát, tươi khỏe, cây rất phù hợp trồng chậu trang trí nội thất-văn phòng.
+                p Ngoài ra, cây còn có đặc điểm lọc khí, làm xanh mát môi trường, giúp điều hòa không khí, đặc biệt tốt cho những môi trường thường xuyên sử dụng các loại máy móc tảng nhiệt. Có thể bày cây ở hành lang hay ở giữa sảnh, đặt ở cạnh bàn làm việc hoặc trang trí các góc phòng có diện tích trung bình.
+                p Quý khách có thể tham khảo thêm về cách chăm sóc cây qua bài viết sau: HD chăm sóc cây hoa cảnh
+        +sameProducts(sameProducts)

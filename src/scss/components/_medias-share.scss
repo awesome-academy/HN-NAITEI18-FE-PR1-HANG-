@@ -1,0 +1,73 @@
+.medias-share {
+    gap: 4px;
+
+    &__item {
+        gap: 4px;
+    }
+
+    &__text {
+        border-radius: 2px;
+
+        &--facebook {
+            background: linear-gradient($han-blue-color, $blue-yonder-color);
+            padding-top: 3px;
+            padding-bottom: 3px;
+            padding-left: 4px;
+            padding-right: 5px;
+            gap: 4px;
+        }
+
+        &--twitter {
+            gap: 3px;
+            padding-top: 4px;
+            padding-bottom: 5px;
+            padding-left: 7px;
+            padding-right: 7px;
+        }
+
+        &--google {
+            padding-top: 4px;
+            padding-bottom: 4px;
+            padding-right: 6px;
+            padding-left: 6px;
+        }
+    }
+
+    &__icon {
+        border-radius: 2px;
+
+        &--facebook {
+            height: 14px;
+            width: 14px;
+            color: $blue-yonder-color;
+
+            i {
+                right: 2px;
+            }
+        }
+    }
+
+    &__number {
+        &>* {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 8px;
+            padding-right: 8px;
+            height: fit-content;
+            border-radius: 2px;
+        }
+
+        &::before {
+            content: "";
+            height: 5px;
+            width: 5px;
+            border: 1px solid $manatee-color;
+            transform: rotate(45deg) translate3d(-50%, 0, 0);
+            border-top-color: white;
+            border-right-color: white;
+            background-color: white;
+            position: absolute;
+            top: 50%;
+        }
+    }
+}
