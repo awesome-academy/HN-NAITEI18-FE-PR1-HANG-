@@ -1,20 +1,22 @@
 include ./stars-rating
 
-mixin productCard(img, title, price, tag, isBig = false, hasActions = false)
+mixin productCard(img, title, price, tag, description, isBig = false, hasActions = false)
     .card.rounded-0.product-card&attributes(attributes)
         if tag 
             .product-card__tag.z-3.rounded-circle.d-flex.align-items-center.justify-content-center.text-uppercase.display-14px.text-white.position-absolute(class=(isBig ? "product-card__tag--big" : "product-card__tag--small") + (" bg-" + tag.color))
                 span= tag.content
         .product-card__top.position-relative
             img.card-img-top.rounded-0(src="./assets/images/" + img.name, alt=img.alt)
-            if img.hasHover 
+            if img.hasHover && !hasActions
                 +productActions(false, false).product-card__actions.d-flex.position-absolute
         .product-card__body.card-body.text-center
             h5.product-card__title.card-title.text-davy-grey.display-16px.mb-0= title
             .product-card__stars.display-14px
                 +starsRating
+            if description 
+                p.product-card__description.display-12px.text-granite-gray= description
             .product-card__price.card-text.display-18px.text-pure-red= price.now 
             if price.pre 
                 .product-card__price.product-card__price--pre.card-text.display-14px.text-decoration-line-through.text-spanish-gray= price.pre
-            if hasAction 
+            if hasActions
                 +productActions
