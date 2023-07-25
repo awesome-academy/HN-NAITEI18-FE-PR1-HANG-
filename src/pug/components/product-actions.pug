@@ -1,0 +1,8 @@
+mixin productActions(hasHeart = true, bordered = true) 
+    .product-actions.d-flex&attributes(attributes)
+        a.btn.btn-primary.d-flex.align-items-center.justify-content-center.rounded-pill.bg-green-sheen.display-13px.text-uppercase(href="#", class=bordered ? 'border-0' : '') Mua ngay
+        a.btn.btn-primary.btn-white.rounded-circle.d-flex.align-items-center.bg-white.text-black.display-12px.justify-content-center(href="#", class=bordered ? 'border border-chinese-white' : 'border-0') 
+            i.fa-solid.fa-magnifying-glass
+        if hasHeart 
+            a.btn.btn-primary.btn-white.rounded-circle.d-flex.align-items-center.bg-white.text-black.display-12px.justify-content-center(href="#", class=bordered ? 'border border-chinese-white' : 'border-0') 
+                i.fa-solid.fa-heart

@@ -1,0 +1,15 @@
+mixin sidebarList(list)
+    .sidebar-list&attributes(attributes) 
+        ul.list-group.list-group-flush 
+            each item, index in list 
+                li.list-group-item.display-12px.text-taupe-gray.d-flex.align-items-baseline(class=index == categories.length - 1 ? "border border-start-0 border-end-0 border-top-0" : "")
+                    i.fa-solid.fa-angle-right.display-10px
+                    span(class=item.selected ? "fw-bold text-shiny-shamrock" : "")
+                        if item.name
+                            span &nbsp; #{item.name}
+                        if item.from && item.to
+                            span &nbsp; #{item.from} Đ
+                            span &nbsp;-&nbsp;
+                            span #{item.to} Đ
+                        if item.amount && item.amount != 0
+                            span &nbsp; &lpar; #{item.amount} &rpar;

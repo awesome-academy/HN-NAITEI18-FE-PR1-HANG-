@@ -66,6 +66,10 @@
             padding-bottom: 14px;
         }
 
+        .product-card__description {
+            line-height: 18px;
+        }
+
         .product-card__price {
             font-family: $font-family-robotoslab;
             display: inline;

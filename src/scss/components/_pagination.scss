@@ -1,0 +1,13 @@
+.pagination {
+    gap: 8px;
+    font-family: $font-family-roboto;
+
+    .page-item {
+        height: 46px;
+        min-width: 46px;
+
+        .page-link {
+            height: 100%;
+        }
+    }
+}
