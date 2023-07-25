@@ -44,7 +44,7 @@ mixin header(activeMenu)
                 a(href="#").header__menu-icon.text-white.h-100.align-items-center.d-flex.text-decoration-none
                     i.fa-solid.fa-bars
                 each menuItem in menuItems
-                    a(href=menuItem.href, class=activeMenu == menuItem.content ? "bg-md-sea-green" : "").header__menu-item.text-white.text-decoration-none.h-100.d-lg-flex.align-items-center.d-none
+                    a(href=menuItem.href, class=activeMenu == menuItem.content ? "bg-md-sea-green" : "").header__menu-item.text-white.text-decoration-none.h-100.d-lg-flex.align-items-center.d-none.text-uppercase.z-3
                         span= menuItem.content
                         if menuItem.hasIcon 
                             i.fa-solid.fa-caret-down

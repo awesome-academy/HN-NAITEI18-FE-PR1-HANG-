@@ -1,0 +1,21 @@
+extends ../layouts/default-layout
+
+include ../partials/products-sidebar
+
+block header 
+    +header('Sản phẩm')
+
+block content 
+    +breadcrumb(productsBreadcrumbItems)
+    .products.container 
+        .row 
+            .col.col-12.col-lg-3 
+                +productsSidebar
+            .col.col-12.col-lg-9.d-flex.flex-column.align-items-sm-end.align-items-center
+                img.banner.banner--products.object-fit-cover.img-fluid(src="./assets/images/products-banner.png", alt="Products Banner")
+                +listActions(false)
+                .products__list.row 
+                    each product in products 
+                        .col.col-12 
+                            +productCard(product.img, product.title, product.price, product.tag, product.description, false, true).products__card.products__card--list.flex-row
+                +pagination(4)
