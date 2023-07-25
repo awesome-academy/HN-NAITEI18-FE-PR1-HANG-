@@ -1,0 +1,24 @@
+include ../base/variables/list-actions
+
+mixin listActions(isGrid = true)
+    .list-actions.d-flex.justify-content-sm-between.align-items-sm-center.w-100.flex-column.flex-sm-row.justify-content-start.align-items-start
+        .list-actions__left.d-flex
+            if isGrid
+                a(href="grid-products-list.html") 
+                    img(src="./assets/icons/grid-green.png", alt="Grid icon")
+                a(href="list-products-list.html") 
+                    img(src="./assets/icons/list-gray.png", alt="List icon")
+            else
+                a(href="grid-products-list.html") 
+                    img(src="./assets/icons/grid-gray.png", alt="Grid icon")
+                a(href="list-products-list.html") 
+                    img(src="./assets/icons/list-green.png", alt="List icon")
+        .list-actions__right.d-flex.flex-column.flex-sm-row.align-self-end.align-self-sm-start
+            each form in forms 
+                form.list-actions__form.d-flex.align-items-center.align-self-end.align-self-sm-start(action=form.action)
+                    .list-actions__label.col-auto.display-14px
+                        label.col-form-label(for=form.selectName)= form.label 
+                    .list-actions__input.col-auto 
+                        select.list-actions__select.form-select.rounded-0.text-taupe-gray(name=form.selectName, id=form.selectName)
+                            each option in form.options
+                                option(value=option.value)= option.content

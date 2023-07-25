@@ -1,0 +1,17 @@
+.product-actions {
+    gap: 12px;
+
+    .btn {
+        height: 45px;
+
+        &:first-child {
+            width: 147px;
+            font-size: 13px !important;
+        }
+
+        &:not(:first-child) {
+            width: 45px;
+            font-size: 12px !important;
+        }
+    }
+}

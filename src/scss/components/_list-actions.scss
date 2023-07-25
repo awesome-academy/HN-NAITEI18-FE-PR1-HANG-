@@ -1,0 +1,35 @@
+.list-actions {
+    padding-top: 28px;
+    padding-bottom: 25px;
+
+    @include media-breakpoint-down(sm) {
+        gap: 12px;
+    }
+
+    &__left {
+        gap: 13px;
+
+        img {
+            width: 18px;
+            height: 16px;
+        }
+    }
+
+    &__right {
+        gap: 39px;
+
+        @include media-breakpoint-down(sm) {
+            gap: 12px;
+        }
+
+        .list-actions__form {
+            gap: 18px;
+
+            .list-actions__select {
+                height: 40px;
+                font-size: 13px !important;
+                font-family: $font-family-roboto;
+            }
+        }
+    }
+}

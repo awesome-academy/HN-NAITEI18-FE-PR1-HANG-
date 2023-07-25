@@ -1,0 +1,46 @@
+.products-sidebar {
+    margin-top: 50px;
+    font-family: $font-family-roboto;
+
+    @include media-breakpoint-down(md) {
+        margin-top: 30px;
+    }
+
+    &__title {
+        padding-bottom: 15px;
+    }
+
+    &__categories {
+        padding-bottom: 40px;
+
+        @include media-breakpoint-down(md) {
+            padding-bottom: 20px;
+        }
+    }
+
+    &__prices {
+        padding-bottom: 42px;
+
+        @include media-breakpoint-down(md) {
+            padding-bottom: 20px;
+        }
+    }
+
+    &__colors {
+        .products-sidebar__title {
+            padding-bottom: 22px;
+        }
+
+        .products-sidebar__list {
+            row-gap: 25px;
+            .products-sidebar__color {
+                gap: 9px;
+    
+                .products-sidebar__color-display {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+}

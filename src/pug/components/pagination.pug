@@ -1,0 +1,15 @@
+- let page = 1
+
+mixin pagination(total) 
+    ul.pagination 
+        li.page-item
+            a.page-link.d-flex.align-items-center.text-taupe-gray.display-12px.rounded-0(href="#") 
+                span.d-none.d-sm-inline Trang trước
+                span.d-inline.d-sm-none.mx-auto(aria-hidden="true") &laquo;
+        while page <= total 
+            li.page-item(class=page == 1 ? "active" : "") 
+                a.page-link.d-flex.align-items-center.justify-content-center.display-14px(href="#", class=page == 1 ? "bg-md-sea-green" : "text-taupe-gray")= page++ 
+        li.page-item
+            a.page-link.d-flex.align-items-center.text-taupe-gray.display-12px.rounded-0(href="#") 
+                span.d-none.d-sm-inline Trang sau
+                span.d-inline.d-sm-none.mx-auto(aria-hidden="true") &raquo;

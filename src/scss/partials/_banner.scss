@@ -1,4 +1,18 @@
 .banner {
+    &--products {
+        margin-top: 50px;
+        aspect-ratio: 848 / 160;
+        object-position: 0 -128px;
+
+        @include media-breakpoint-down(lg) {
+            object-position: 0 -96px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            object-position: 0;
+        }
+    }
+
     &__indicators {
         gap: 9px;
         margin-bottom: 33px;
