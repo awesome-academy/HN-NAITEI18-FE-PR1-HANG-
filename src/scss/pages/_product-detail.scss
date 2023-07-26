@@ -1,0 +1,122 @@
+.product {
+    margin-top: 60px;
+    margin-bottom: 80px;
+
+    @include media-breakpoint-down(lg) {
+        margin-top: 30px;
+        margin-bottom: 35px;
+    }
+
+    &__info {
+        gap: 30px;
+    }
+
+    &__images {
+        max-width: 463px;
+        row-gap: 27px;
+    }
+
+    &__image {
+        width: 83px;
+        height: 83px;
+
+        &--main {
+            width: 100% !important;
+            height: auto;
+            aspect-ratio: 463 / 433;
+        }
+    }
+
+    &__text {
+        padding-top: 17px;
+        padding-bottom: 17px;
+    }
+
+    &__title {
+        font-family: $font-family-roboto;
+        margin-bottom: 12px;
+    }
+
+    &__price {
+        gap: 12px;
+        margin-top: 21px;
+        padding-bottom: 20px;
+    }
+
+    &__description {
+        line-height: 1.041667rem;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    &__form {
+        gap: 23px;
+        padding-top: 20px;
+        padding-bottom: 26px;
+    }
+
+    &__amount-input {
+        gap: 6px;
+
+        .btn {
+            height: 45px;
+            min-width: 43px;
+        }
+
+        input {
+            width: 74px;
+            height: 45px;
+
+            &::-webkit-inner-spin-button,
+            &::-webkit-outer-spin-button {
+                display: none;
+            }
+        }
+    }
+
+    &__actions {
+        margin-top: 19px;
+        margin-bottom: 24px;
+    }
+
+    &__tabs {
+        margin-top: 110px;
+        padding-bottom: 111px;
+
+        @include media-breakpoint-down(lg) {
+            margin-top: 80px;
+            padding-bottom: 81px;
+        }
+
+        .nav-tabs {
+            border-bottom-color: $anti-flash-white-color !important;
+
+            .nav-link {
+                padding-top: 16px;
+                font-size: 14px !important;
+                border: 0 !important;
+                border-width: 2px !important;
+    
+                &.active {
+                    border-top: 2px solid $pure-gray-color !important;
+                    border-left: 2px solid $anti-flash-white-color !important;
+                    border-right: 2px solid $anti-flash-white-color !important;
+                    color: $green-sheen-color !important;
+                }
+            }
+        }
+    }
+
+    &__panel {
+        padding-top: 50px;
+        padding-left: 44px;
+        padding-right: 60px;
+        padding-bottom: 38px;
+
+        p {
+            font-size: 0.75rem !important;
+            line-height: 18px;
+            margin-bottom: 18px;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.same-products {
+    &__title {
+        margin-bottom: 50px;
+    }
+
+    &__list {
+        @include media-breakpoint-down(lg) {
+            row-gap: 30px;
+        }
+    }
+}
