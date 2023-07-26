@@ -16,6 +16,7 @@
 @import "./components/short-shop-info";
 @import "./components/title";
 @import "./components/product-card";
+@import "./components/news-caption";
 @import "./components/medias-share";
 @import "./components/list-actions";
 @import "./components/pagination";
@@ -28,12 +29,13 @@
 @import "./partials/featured-products";
 @import "./partials/best-seller-products";
 @import "./partials/promotional-products";
+@import "./partials/news-sidebar";
 @import "./partials/same-products";
-
 @import "./partials/products-sidebar";
 @import "./partials/new-products";
 @import "./partials/news";
 
+@import "./pages/news-list";
 @import "./pages/products";
 @import "./pages/product-detail";
 

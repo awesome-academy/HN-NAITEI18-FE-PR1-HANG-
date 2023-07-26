@@ -1,0 +1,21 @@
+mixin newsSidebar 
+    .news-sidebar 
+        .news-sidebar__categories 
+            +sidebarTitle('Danh mục sản phẩm', 'categories-collapse').news-sidebar__title.news-sidebar__title--categories
+            .news-sidebar__list
+                +sidebarList(categories)#categories-collapse
+        .news-sidebar__featured-news 
+            +sidebarTitle('Tin tức nổi bật', 'featured-new-collapse').news-sidebar__title.news-sidebar__title--featured-news
+            #featured-new-collapse.sidebar-list
+                .news-sidebar__list.d-flex.flex-column
+                    each featuredNewsItem in featuredNewsList 
+                        .news-sidebar__item.d-flex 
+                            .news-sidebar__img 
+                                img(src="./assets/images/" + featuredNewsItem.img, alt=featuredNewsItem.title)
+                            p.display-12px.text-granite-gray= featuredNewsItem.title
+        .news-sidebar__tags 
+            +sidebarTitle('Blog tag', 'blog-tag-collapse').news-sidebar__title.news-sidebar__title--tags
+            #blog-tag-collapse.sidebar-list
+                .news-sidebar__list.d-flex.flex-wrap
+                    each blogTag, index in blogTags 
+                        a.news-sidebar__tag.d-block.text-decoration-none.display-12px.border.border-silver-sand(href=blogTag.href, class=!index ? 'bg-md-sea-green text-white' : 'border-1 text-taupe-gray')= blogTag.content

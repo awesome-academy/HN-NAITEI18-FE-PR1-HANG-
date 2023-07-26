@@ -1,0 +1,41 @@
+.news {
+    padding-top: 78px;
+    padding-bottom: 111px;
+
+    @include media-breakpoint-down(lg) {
+        padding-top: 35px;
+        padding-bottom: 80px;
+    }
+
+    &__list {
+        gap: 55px;
+        padding-bottom: 65px;
+
+        @include media-breakpoint-down(lg) {
+            gap: 30px;
+            padding-bottom: 20px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 15px;
+    }
+
+    &__caption {
+        margin-bottom: 19px;
+    }
+
+    &__time {
+        gap: 8px;
+    }
+
+    &__description {
+        margin-top: 32px;
+    }
+
+    .row {
+        @include media-breakpoint-down(lg) {
+            gap: 30px;
+        }
+    }
+}

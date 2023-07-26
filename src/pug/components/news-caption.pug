@@ -1,0 +1,11 @@
+mixin newsCaption(newsItem) 
+    p.news-caption.text-philippine-silver.display-12px.lh-1.d-flex&attributes(attributes)
+        span.news__time.d-flex
+            i.fa-regular.fa-calendar-minus.text-shiny-shamrock
+            span= newsItem.date 
+        span.news__time.d-flex
+            i.fa-regular.fa-clock.text-shiny-shamrock 
+            span= newsItem.time 
+        span.news__time.d-flex
+            i.fa-regular.fa-comment-dots.text-shiny-shamrock 
+            span #{newsItem.comments} Bình luận
