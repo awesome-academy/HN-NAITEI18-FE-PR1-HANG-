@@ -1,0 +1,84 @@
+.sign-in {
+    margin-top: 80px;
+    margin-bottom: 109px;
+
+    @include media-breakpoint-down(sm) {
+        margin-top: 35px;
+        margin-bottom: 80px;
+    }
+
+    .row {
+        @include media-breakpoint-down(sm) {
+            gap: 35px;
+        }
+    }
+
+    .col {
+        &:nth-child(1) {
+            @include media-breakpoint-up(md) {
+                padding-right: 28px;
+            }
+        }
+
+        &:nth-child(2) {
+            @include media-breakpoint-up(md) {
+                padding-left: 28px;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 18px;
+
+        &--form {
+            margin-bottom: 59px;
+
+            @include media-breakpoint-down(sm) {
+                margin-bottom: 18px;
+            }
+        }
+    }
+
+    &__field {
+        margin-bottom: 31px;
+
+        @include media-breakpoint-down(sm) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__actions {
+        margin-top: 16px;
+        margin-bottom: 36px;
+
+        &__top {
+            gap: 26px;
+            margin-bottom: 32px;
+        }
+    }
+
+    &__remember {
+        gap: 14px;
+
+        span {
+            font-family: $font-family-roboto;
+        }
+    }
+
+    &__forgot-password {
+        font-family: $font-family-roboto;
+    }
+
+    &__submit {
+        .btn {
+            height: 44px;
+            width: 146px;
+            font-size: 13px !important;
+        }
+    }
+
+    &__text {
+        margin-bottom: 36px;
+        font-family: $font-family-roboto;
+    }
+}

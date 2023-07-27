@@ -1,0 +1,31 @@
+extends ../layouts/default-layout 
+
+block header 
+    +header('Đăng nhập')
+
+block content 
+    +breadcrumb(signInBreadcrumbItems)
+    .sign-in.container 
+        .row 
+            .col.col-12.col-md-6 
+                form.sign-in__form(action="") 
+                    .sign-in__title.sign-in__title--form
+                        +formTitle("Thông tin cá nhân")
+                    each signInField in signInFields 
+                        .sign-in__field 
+                            +formField(signInField.label, signInField.type, signInField.name)
+                    .sign-in-form__actions 
+                        .sign-in__actions__top.d-flex.align-items-baseline
+                            .sign-in__remember.d-flex.align-items-center 
+                                +checkbox('remember')
+                                span.display-12px Ghi nhớ tài khoản 
+                            .sign-in__forgot-password 
+                                a.text-taupe-gray.display-12px.fst-italic(href="#") Bạn quên mật khẩu?
+                        .sign-in__submit 
+                            button.btn.btn-primary.rounded-pill.text-uppercase.bg-md-sea-green.display-13px(type="submit") Đăng nhập
+            .col.col-12.col-md-6
+                .sign-in__title
+                    +formTitle("Bạn chưa có tài khoản?")
+                p.sign-in__text.display-12px.text-granite-gray Đăng ký tài khoản ngay để có thể mua hàng nhanh chóng và dễ dàng hơn  ! Ngoài ra còn có rất nhiều chính sách và ưu đãi cho các thành viên citybike
+                .sign-in__submit 
+                    a.btn.btn-primary.rounded-pill.text-uppercase.bg-md-sea-green.display-13px.d-flex.align-items-center.justify-content-center(href="sign-up.html") Đăng ký    

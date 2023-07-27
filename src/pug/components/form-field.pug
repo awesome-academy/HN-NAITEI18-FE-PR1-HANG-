@@ -1,0 +1,4 @@
+mixin formField(label, name, type = "text", placeholder = "")
+    .form-field&attributes(attributes)
+        label.form-field__label.text-jet.display-12px(for=name)= label
+        +formInput(type, name, placeholder)
