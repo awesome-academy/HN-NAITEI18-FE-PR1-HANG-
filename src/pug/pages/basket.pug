@@ -1,0 +1,43 @@
+extends ../layouts/default-layout 
+
+block header 
+    +header('Giỏ hàng')
+
+block content 
+    +breadcrumb(basketBreadcrumbItems)
+    .basket.container.d-flex.flex-column.align-items-end 
+        .table-responsive.w-100
+            table.basket__table.table.table-bordered.mb-0
+                thead
+                    tr 
+                        each basketColName in basketColNames
+                            th.bg-md-sea-green.text-white.fw-normal.text-uppercase.display-14px.text-center.align-middle(scope="col")= basketColName
+                tbody
+                    each basketRow in basketRows 
+                        tr.display-18px 
+                            td
+                                img.basket__img(src="./assets/images/" + basketRow.img, alt=basketRow.name)
+                            td.text-uppercase.text-green-sheen= basketRow.name 
+                            td.text-taupe-gray= basketRow.price 
+                            td
+                                input.basket__input.basket__input--number.form-control.rounded-0.text-taupe-gray.border.border-1.border-silver-sand.d-flex.justify-content-center.align-items-center.text-center(type="number", name="amount", value=basketRow.amount) 
+                            td.text-taupe-gray= basketRow.total 
+                            td
+                                a.text-decoration-none.text-taupe-gray(href="#")
+                                    i.fa-solid.fa-trash-can
+        .basket__actions.d-flex 
+            button.basket__btn.btn.btn-outline-green-sheen.text-uppercase.rounded-pill Hủy đơn hàng
+            button.basket__btn.btn.btn-green-sheen.text-uppercase.rounded-pill.border-0.text-white Tiếp tục mua
+        table.basket__table.basket__table--bill.table.table-bordered.text-uppercase
+            tbody
+                tr 
+                    th.text-green-sheen(scope="row") Tổng tiền ( chưa thuế )
+                    td.text-green-sheen.fw-bold 270.000 đ 
+                tr
+                    th.text-green-sheen(scope="row") Thuế (VAT 10%)
+                    td.text-green-sheen.fw-bold 27.000 đ 
+                tr.basket__final
+                    th.bg-md-sea-green.text-white.align-middle(scope="row") Tổng phải thanh toán 
+                    td.bg-md-sea-green.text-white.fw-bold 297.000 đ 
+        .basket__actions.basket__actions--bill
+            button.basket__btn.btn.btn-green-sheen.text-uppercase.rounded-pill.border-0.text-white Thanh toán
