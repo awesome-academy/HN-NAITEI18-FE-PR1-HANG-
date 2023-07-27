@@ -36,7 +36,7 @@ mixin header(activeMenu)
                             input(type="search", name="search", placeholder="Tìm kiếm...").form-control.header__input.rounded-pill.rounded-end-0.border-end-0
                             span.input-group-text.bg-white.text-taupe-gray.form-control.header__icon.rounded-pill.rounded-start-0.border-start-0
                                 i.fa-solid.fa-magnifying-glass
-                .header__basket.text-raisin-black.d-lg-flex.align-items-end.d-none
+                a.header__basket.text-raisin-black.d-lg-flex.align-items-end.d-none.text-decoration-none(href="basket.html")
                     img(src="./assets/icons/basket-icon@4x.png", alt="basket icon").header__basket-icon
                     span.display-12px.d-lg-none.d-xl-inline 0 sản phẩm
         .header__menu.bg-shiny-shamrock
@@ -51,5 +51,5 @@ mixin header(activeMenu)
                 .header__res-icons.d-lg-none.text-white.h-100.align-items-center.d-flex
                         .header__search.display-14px.d-flex
                             i.fa-solid.fa-magnifying-glass
-                        .header__basket-icon.d-flex
+                        a.header__basket-icon.d-flex(href="basket.html")
                             img.object-fill.w-100.h-100(src="./assets/icons/white-basket-icon.png", alt="basket icon")
