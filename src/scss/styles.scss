@@ -14,6 +14,10 @@
 
 @import "./components/breadcrumb";
 @import "./components/short-shop-info";
+@import "./components/form-input";
+@import "./components/form-field";
+@import "./components/checkbox";
+
 @import "./components/title";
 @import "./components/product-card";
 @import "./components/news-caption";
@@ -35,6 +39,7 @@
 @import "./partials/new-products";
 @import "./partials/news";
 
+@import "./pages/sign-in";
 @import "./pages/news-list";
 @import "./pages/products";
 @import "./pages/product-detail";
