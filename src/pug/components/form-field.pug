@@ -1,4 +1,7 @@
-mixin formField(label, name, type = "text", placeholder = "")
+mixin formField(label, name, type = "text", placeholder = "", isRequired = false)
     .form-field&attributes(attributes)
-        label.form-field__label.text-jet.display-12px(for=name)= label
-        +formInput(type, name, placeholder)
+        label.form-field__label.text-jet.display-12px(for=name)
+            span= label
+            if isRequired 
+                span.text-pure-red &nbsp;*
+        +formInput(type, name, placeholder, isRequired)

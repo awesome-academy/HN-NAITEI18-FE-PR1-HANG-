@@ -1,0 +1,31 @@
+.sign-up {
+    margin-top: 64px;
+    margin-bottom: 100px;
+
+    @include media-breakpoint-down(lg) {
+        margin-top: 35px;
+        margin-bottom: 80px;
+    }
+
+    &__forms {
+        gap: 42px;
+
+        &__group {
+            gap: 68px;
+
+            @include media-breakpoint-down(lg) {
+                gap: 35px;
+            }
+        }
+    }
+
+    &__buttons {
+        gap: 16px;
+    }
+
+    &__button {
+        font-size: 13px !important;
+        height: 44px;
+        width: 146px;
+    }
+}

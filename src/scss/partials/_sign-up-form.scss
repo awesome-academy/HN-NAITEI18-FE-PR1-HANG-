@@ -1,0 +1,32 @@
+.sign-up-form {
+    &__title {
+        margin-bottom: 32px;
+
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__fields {
+        column-gap: 56px;
+        row-gap: 33px;
+
+        @include media-breakpoint-down(lg) {
+            column-gap: 30px;
+            row-gap: 12px;
+        }
+    }
+
+    &__field {
+        width: calc(50% - 56px / 2);
+
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
+    }
+
+    &__checkbox {
+        gap: 14px;
+        margin-top: 6px;
+    }
+}

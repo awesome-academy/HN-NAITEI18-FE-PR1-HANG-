@@ -1,0 +1,11 @@
+mixin signUpForm(fields, isUserInfo = false)
+    .sign-up-form
+        .sign-up-form__title 
+            +formTitle('Thông tin cá nhân')
+        .sign-up-form__fields.d-flex.flex-wrap
+            each field in fields 
+                +formField(field.label, field.name, field.type, "", true).sign-up-form__field
+            if isUserInfo 
+                .sign-up-form__checkbox.d-flex.align-items-center 
+                    +checkbox('allow-noti-by-email')
+                    span.display-12px.text-taupe-gray Đăng ký nhận thông báo qua email

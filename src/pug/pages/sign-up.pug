@@ -1,0 +1,17 @@
+extends ../layouts/default-layout 
+
+include ../partials/sign-up-form
+
+block header 
+    +header('Đăng ký')
+
+block content 
+    +breadcrumb(signUpBreadcrumbItems)
+    .sign-up.container 
+        form.sign-up__forms.d-flex.flex-column(action="")
+            .sign-up__forms__group.d-flex.flex-column 
+                +signUpForm(userFields, true) 
+                +signUpForm(accountFields)
+            .sign-up__buttons.d-flex 
+                button.sign-up__button.btn.btn-outline-green-sheen.text-uppercase.rounded-pill Quay lại
+                button.sign-up__button.btn.btn-md-sea-green.text-uppercase.rounded-pill.text-white Đăng ký
