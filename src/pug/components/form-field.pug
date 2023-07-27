@@ -1,7 +1,10 @@
-mixin formField(label, name, type = "text", placeholder = "", isRequired = false)
+mixin formField(label, name, type = "text", placeholder = "", isRequired = false, fieldType = "input")
     .form-field&attributes(attributes)
         label.form-field__label.text-jet.display-12px(for=name)
             span= label
             if isRequired 
                 span.text-pure-red &nbsp;*
-        +formInput(type, name, placeholder, isRequired)
+        if fieldType == "input"
+            +formInput(type, name, placeholder, isRequired)
+        if fieldType == "textarea"
+            +formTextarea(name)
