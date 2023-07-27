@@ -1,0 +1,19 @@
+mixin popUp 
+    #pop-up.pop-up.modal.fade(tabindex='-1' aria-hidden="true" role='dialog')
+        .pop-up__dialog.modal-dialog
+            .pop-up__header.modal-header.p-0.border-0.position-absolute
+                button.pop-up__cancel.text-green-sheen.text-decoration-none.display-18px.border-0.bg-transparent.p-0.lh-1.z-3(type='button' data-bs-dismiss="modal" aria-label="Close") X
+            .pop-up__content.modal-content.d-flex.flex-column.flex-sm-row.align-items-center.rounded-0
+                img.pop-up__img.object-fit-cover(src="./assets/images/flowers.png", alt="Flowers")
+                .pop-up__main
+                    h3.pop-up__title.text-granite-gray.display-37px Nhận tin tức từ chúng tôi
+                    form.pop-up__form(action="" method="method")
+                        label.pop-up__label.display-23px.text-md-sea-green.text-uppercase.fw-bold Đăng ký email ngay hôm nay
+                        .pop-up__input-group.d-flex
+                            +formInput('email', 'email', 'Nhập email của bạn vào đây').pop-up__input
+                            button.rounded-0.d-flex.align-items-center.justify-content-center.bg-md-sea-green.border-0.text-white(type="submit")
+                                i.fa-solid.fa-paper-plane
+                    p.pop-up__description.text-granite-gray.display-14px Đăng ký email ngay hôm nay để nhận các thông tin về sự kiện và các chương trình giảm giá từ chúng tôi 
+                    .pop-up__checkbox.d-flex.align-items-baseline
+                        +checkbox
+                        span.display-14px.text-granite-gray Không hiển thị lại thông báo này nữa
