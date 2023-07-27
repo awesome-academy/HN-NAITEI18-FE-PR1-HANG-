@@ -1,0 +1,9 @@
+include ../components/comment
+
+mixin comments
+    .comments 
+        h3.comments__title.display-18px.text-uppercase.fw-bold.text-jet Bình luận (3)
+        .comments__list 
+            each comment in comments
+                .comments__item 
+                    +comment(comment.username, comment.content, comment.time, comment.comments)

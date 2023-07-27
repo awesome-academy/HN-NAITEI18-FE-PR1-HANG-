@@ -1,0 +1,28 @@
+.comment {
+    &__child {
+        margin-left: 108px;
+    }
+
+    &__container {
+        gap: 34px;
+        padding-top: 39px;
+        padding-bottom: 39px;
+    }
+
+    &__avatar {
+        height: 74px;
+        width: 74px;
+    }
+
+    &__username {
+        margin-bottom: 18px;
+    }
+
+    &__content {
+        margin-bottom: 18px;
+    }
+
+    &__time {
+        font-family: $font-family-roboto;
+    }
+}

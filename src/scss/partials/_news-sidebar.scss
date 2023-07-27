@@ -1,10 +1,18 @@
 .news-sidebar {
     &__categories {
         margin-bottom: 38px;
+
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 20px;
+        }
     }
 
     &__featured-news {
         margin-bottom: 35px;
+
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 20px;
+        }
     }
 
     &__title {

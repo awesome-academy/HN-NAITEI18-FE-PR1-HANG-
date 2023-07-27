@@ -1,0 +1,12 @@
+mixin comment(username, content, time, comments) 
+    .comment&attributes(attributes)
+        .comment__container.d-flex.border.border-1.border-top-0.border-start-0.border-end-0.border-chinese-white
+            img.comment__avatar.object-fit-cover.rounded-circle(src="./assets/images/user.png", alt="Nguyễn Văn An")
+            .d-flex.flex-column 
+                span.comment__username.display-14px.text-jet= username
+                p.comment__content.display-12px.text-taupe-gray= content 
+                time
+                    em.comment__time.display-12px.text-taupe-gray= time
+        if comments 
+            each comment in comments 
+                +comment(comment.username, comment.content, comment.time).comment__child
