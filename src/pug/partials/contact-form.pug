@@ -1,0 +1,8 @@
+mixin contactForm 
+    form.contact-form(action="")
+        .contact-form__title
+            +formTitle('Thông tin liên hệ')
+        .contact-form__fields.d-flex.flex-column 
+            each contactField in contactFields 
+                +formField(contactField.label, contactField.name, contactField.type, "", true).contact-form__field
+            +formField('Bình luận', 'comment', '', '', true, 'textarea').contact-form__field

@@ -27,6 +27,7 @@
 @import "./components/sidebar-list";
 @import "./components/product-actions";
 @import "./components/news-card";
+@import "./components/form-textarea";
 
 @import "./partials/banner";
 @import "./partials/banner-middle";
@@ -39,9 +40,11 @@
 @import "./partials/new-products";
 @import "./partials/news";
 @import "./partials/sign-up-form";
+@import "./partials/contact-form";
 
 @import "./pages/sign-up";
 @import "./pages/sign-in";
+@import "./pages/contact";
 @import "./pages/news-list";
 @import "./pages/products";
 @import "./pages/product-detail";
