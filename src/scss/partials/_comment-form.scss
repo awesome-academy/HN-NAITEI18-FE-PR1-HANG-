@@ -1,0 +1,38 @@
+.comment-form {
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__fields {
+        row-gap: 22px;
+    }
+
+    &__input {
+        max-width: 263px;
+
+        @include media-breakpoint-down(lg) {
+            max-width: 48%;
+        }
+
+        &[name="fullname"] {
+            @include media-breakpoint-down(lg) {
+                max-width: 100%;
+            }
+        }
+    }
+
+    &__textarea {
+        max-height: 147px;
+        resize: none;
+    }
+
+    &__buttons {
+        margin-top: 26px;
+    }
+
+    &__submit {
+        height: 44px;
+        width: 146px;
+        font-size: 13px !important;
+    }
+}

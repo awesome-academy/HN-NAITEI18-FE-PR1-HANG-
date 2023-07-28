@@ -17,10 +17,10 @@
 @import "./components/form-input";
 @import "./components/form-field";
 @import "./components/checkbox";
-
 @import "./components/title";
 @import "./components/product-card";
 @import "./components/news-caption";
+@import "./components/comment";
 @import "./components/medias-share";
 @import "./components/list-actions";
 @import "./components/pagination";
@@ -35,6 +35,8 @@
 @import "./partials/best-seller-products";
 @import "./partials/promotional-products";
 @import "./partials/news-sidebar";
+@import "./partials/comments";
+@import "./partials/comment-form";
 @import "./partials/same-products";
 @import "./partials/products-sidebar";
 @import "./partials/new-products";
@@ -49,6 +51,7 @@
 @import "./pages/products";
 @import "./pages/product-detail";
 @import "./pages/basket";
+@import "./pages/news-detail";
 
 @import "./layouts/logo";
 @import "./layouts/header";

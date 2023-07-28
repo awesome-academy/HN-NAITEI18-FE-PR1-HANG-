@@ -1,0 +1,10 @@
+mixin commentForm 
+    form.comment-form(action="") 
+        h3.comment-form__title.text-jet.display-18px.text-uppercase.fw-bold Viết bình luận:
+        .comment-form__fields.d-flex.flex-wrap.justify-content-between
+            +formInput('text', 'fullname', 'Họ và tên').comment-form__input
+            +formInput('email', 'email', 'Email').comment-form__input
+            +formInput('phonenumber', 'phonenumber', 'Phone').comment-form__input
+            +formTextarea('comment', 'Bình luận').comment-form__textarea
+        .comment-form__buttons.d-flex.justify-content-end
+            button.comment-form__submit.d-block.btn.btn-md-sea-green.rounded-pill.text-white.display-13px.fw-normal.text-uppercase(type="submit") Gửi
