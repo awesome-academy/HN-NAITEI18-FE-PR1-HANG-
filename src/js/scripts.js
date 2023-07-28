@@ -16,3 +16,8 @@ function mediaBreakPointDown(x) {
 const sm = window.matchMedia("(max-width: 577.9px)");
 mediaBreakPointDown(sm);
 sm.addListener(mediaBreakPointDown);
+
+var popUp = new bootstrap.Modal(document.getElementById("pop-up"), {});
+document.onreadystatechange = function () {
+  popUp.show();
+};

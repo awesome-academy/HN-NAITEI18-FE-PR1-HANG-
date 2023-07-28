@@ -31,8 +31,8 @@ function htmlTask() {
 }
 
 function jsTask() {
-  return src(jsFiles)
-    .pipe(src("node_modules/bootstrap/dist/js/bootstrap.min.js"))
+  return src("node_modules/bootstrap/dist/js/bootstrap.min.js")
+    .pipe(src(jsFiles))
     .pipe(concat("all.js"))
     .pipe(dest("dist/js"));
 }
